@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.XSDValidationExample">
+      <class name="test.GetAndPostExample">
         <methods>
-          <include name="xsdexample"/>
+          <include name="getAllocatedSurveys2"/>
         </methods>
-      </class> <!-- test.XSDValidationExample -->
+      </class> <!-- test.GetAndPostExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

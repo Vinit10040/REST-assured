@@ -60,7 +60,21 @@ public class GetAndPostExample {
 		.get("/api/v2/supply/getAllocatedSurveys").then().statusCode(200).log().all();
 	}
 	
-	@Test
+	
+	//access private API using  outh2
+	
+	@Test 
+	public void getAllocatedSurveys2()
+	{
+		baseURI = "http://innovate-stage-209385288.us-east-1.elb.amazonaws.com";
+		given().auth().
+        oauth2("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMDdmMDQ5Nzc1ZDA2MGZiNGVlZTZmYiIsInVzcl9pZCI6NTAzMywidXNyX3R5cGUiOiJzdXBwbGllciIsImlhdCI6MTYxMTEzNTEzNX0.GucRE8lkpAelaRkMZN_c5F_G6CARIFRJCq19sVAC2L8").	
+	    //when().get("/api/v2/supply/getAllocatedSurveys").
+	    when().get("/api/v2/supply/getAllocatedSurveys").
+	    then().assertThat().
+	    statusCode(200).log().all();
+	}
+	//@Test
 	
 	public void getUniqueIpAndPID() {
 		
